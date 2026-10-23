@@ -1,0 +1,22 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812",
+    "CPY001",
+    "D203",
+    "D107",
+    "D213",
+    "ISC001",
+    "RUF001",
+    "RUF002",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"main.py" = ["T201"]
+"tests/*.py" = ["D100", "D103", "INP001", "S101"]
